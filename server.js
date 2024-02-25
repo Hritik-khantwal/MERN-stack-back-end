@@ -41,7 +41,7 @@ app.use("/api/v1/rating", ratingRoutes);
 //   res.sendFile(path.join(__dirname, "client/build/index.html"));
 // });
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.send("<h1>server is working </h1>");
 });
 
