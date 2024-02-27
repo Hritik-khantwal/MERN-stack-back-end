@@ -337,8 +337,8 @@ export const productPaymentController = async (req, res) => {
       customer: customer.id,
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://127.0.0.1:3000/success",
-      cancel_url: "http://127.0.0.1:3000/cancel",
+      success_url: `${process.env.FRONTEND_URL}/success`,
+      cancel_url: `${process.env.FRONTEND_URL}/cancel`,
     });
     //  set details in orderModel
     // calculate total amount
